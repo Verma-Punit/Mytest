@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Alpine</title>
+</head>
+
+<body>
+    <div x-data="{ title: 'Not a problem',text:'hey punit?' }">
+        <h1 x-text="title"></h1>
+        <span x-text="text"></span>
+        <span x-text="1 + 2"></span>
+    </div>
+    <div x-data="{ open: false , close: false}">
+        <button @click="open=!open">open</button>
+        <button @click="close=!close">close</button>
+        <div x-show="open" x-transition.duration.1000ms>Hey apline</div>
+        <div x-show="close" x-transition.duration.1000ms>By apline</div>
+        <button x-on:click="alert('hello alpine')"
+            style="text-align: center; border: 2px solid red; border-radius: 5px; font-size: 45px;">click</button>
+    </div>
+
+    <div x-data="{ open: false }">
+        <button @click="open = ! open">Toggle</button>
+
+        <div x-show="open" @click.outside="open = false">
+            Contents...
+        </div>
+    </div>
+
+    <div x-data="{ message: 'happy' }">
+        <input type="text" x-model="message">
+
+        <button x-text="message">Change Message</button>
+    </div>
+</body>
+
+</html>

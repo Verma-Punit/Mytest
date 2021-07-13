@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="main">
+
+    <div class="main1">
+      <h1 id="name">Hello Punit!</h1>
+      <h1 id="name2">Hello Ajit Bhaiya!</h1>
+      <h1 id="name3">Hello Manish!</h1>
+      <h1 id="name4"></h1>
+      <h1 id="name5"></h1>
+    </div>
+
+    <div class="main2">
+      <h2 class="name">Hello Punit!</h2>
+      <h2 class="name">Hello Ajit Bhaiya!</h2>
+      <h2 class="name">Hello Manish!</h2>
+      <h2 class="name"></h2>
+      <h2 id="name6"></h2>
+    </div>
+
+    <div id="what"></div>
+
+    <ul class="family">
+      <li>what is your name?</li>
+      <li>what is your father name?</li>
+      <li>what is your mother name?</li>
+      <li>what is your sister name?</li>
+      <li>what is your brother name?</li>
+    </ul>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet libero dui, vel tempus velit pulvinar
+      vitae. Donec sed ultricies massa. Morbi molestie dui at lacus pellentesque, et sodales metus malesuada. Sed
+      odio
+      justo, posuere at dignissim ac, porta nec velit. Donec sed erat elementum, gravida massa at, rhoncus dui.
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis tempus dapibus
+      lectus, eget molestie mi. Sed faucibus dui sed mi dignissim, tempor tincidunt nulla blandit. Nullam
+      tristique
+      ante in sapien maximus aliquet. </p>
+
+    <img id="image" src="2340965.jpg" alt="" width="250px" height="250px">
+
+    <button id="btn" onclick="myFunction()">Click me</button>
+  </div>
+
+  <script>
+    /* Same process in class name
+
+    document.getElementById("name4").innerHTML = "Hello World!";
+    var x = document.getElementsByTagName("h1");
+    document.getElementById("name5").innerHTML = "What is lorem ipsum?" + x[0].innerHTML;
+
+    var x = document.getElementById("main");
+    var y = x.getElementsByTagName("h1")
+    document.getElementById("name5").innerHTML = "What is lorem ipsum?" + y[1].innerHTML;
+
+    var x = document.querySelectorAll("h2.name");
+    document.getElementById("name6").innerHTML = "What is lorem ipsum?" + x[2].innerHTML;
+
+    document.getElementById("image").src = "download.jpeg";
+
+    var z = document.getElementById("name2");
+
+    function myFunction() {
+      alert("Hello Punit Nice to meet you!");
+      console.log("Hello Ajit nice to meet you!");
+    };
+
+    const x = document.getElementById("btn");
+
+    x.addEventListener("click", (es) => {
+      document.querySelector(".name").innerHTML = "hi hi hi hi!";
+      es.target.style.background = "black";
+
+    });
+    x.addEventListener("mouseover", () => {
+      document.querySelector("#name6").innerHTML = "mouseover";
+    });
+    x.addEventListener("mouseout", () => {
+      document.querySelector("#name6").innerHTML = "mouseout";
+    });
+    function myFunction() {
+      var x = "Punit";
+      document.getElementById("what").innerHTML=x;
+    };
+
+       const family = document.querySelector(".family");
+       family.innerHTML= "<h2>Hey Buddy</h2>";
+      
+     Array.from(family).forEach(famy => {
+        famy.innerHTML="keep quit";
+      });
+
+    const para = document.createElement("p");
+    para.innerText="this is new";
+    const element = document.getElementById("what");
+    element.appendChild(para);
+           
+           const f =  document.querySelectorAll(".family li")
+          function myFunction() {
+            f[2].remove();
+          };
+          */                          
+  </script>
+</body>
+
+</html>

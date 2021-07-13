@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="eye.css">
+    <script defer src="https://unpkg.com/alpinejs@3.1.1/dist/cdn.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body x-data="{
+    track() {
+        console.log($refs);
+        const eye = document.querySelectorAll('.eye');
+        eye.forEach(function (eyes) {
+            let postx = eyes.getBoundingClientRect().top + eyes.clientHeight;
+            let posty = eyes.getBoundingClientRect().right + eyes.clientWidth;
+            let rotate = (Math.atan2(event.pageX - postx, event.pageY - posty)) * ((360 / 3.14) * -2) + 370;
+            eyes.style.transform = `rotate(${rotate}deg)`;
+        });
+    },
+}" @mousemove="track">
+    <div class="circle">
+        <div x-ref="eye" class="eye"></div>
+        <div x-ref="eye" class="eye"></div>
+    </div>
+
+    <script>
+        // const body = document.querySelector("body");
+        // body.addEventListener('mousemove', ball);
+        // function ball() {
+        //     const eye = document.querySelectorAll('.eye');
+        //     eye.forEach(function (eyes) {
+        //         let postx = eyes.getBoundingClientRect().top + eyes.clientHeight;
+        //         let posty = eyes.getBoundingClientRect().right + eyes.clientWidth;
+        //         let rotate = (Math.atan2(event.pageX - postx, event.pageY - posty)) * ((360 / 3.14) * -2) + 370;
+        //         eyes.style.transform = "rotate(" + rotate + "deg)";
+        //     })
+        // }
+    </script>
+</body>
+
+</html>

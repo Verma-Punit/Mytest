@@ -1,0 +1,253 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    width: 100%;
+    min-height: 100vh;
+     background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player
+{
+    position: relative;
+    width: 300px;
+    height: 390px;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 8px 20px 0 rgba(52, 52, 53, 0.35);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.player::before,.player::after
+{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 304px;
+  height: 394px;
+  background: linear-gradient(45deg, rgba(254,255,0,1) 0%, rgba(243,0,254,1) 15%, rgba(255,0,0,1) 30%, rgba(0,255,72,1) 45%, rgba(0,26,255,1) 60%, rgba(255,239,2,1) 75%, rgba(0,255,235,1) 90%);
+  background-size: 400%;
+  z-index: -20;
+  animation: nor 20s linear infinite;
+}
+@keyframes nor {
+    0%{
+        background-position: 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.player::after
+{
+    filter: blur(10px);
+}
+.image
+{
+   position: absolute;
+   width: 220px;
+   height: 220px;
+   border-radius: 50%;
+   top: -30%;
+}
+.image img
+{
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.55);
+}
+.image::before,.image::after
+{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 224px;
+  height: 224px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(254,255,0,1) 0%, rgba(243,0,254,1) 15%, rgba(255,0,0,1) 30%, rgba(0,255,72,1) 45%, rgba(0,26,255,1) 60%, rgba(255,239,2,1) 75%, rgba(0,255,235,1) 90%);
+  background-size: 400%;
+  z-index: -1;
+  animation: nor 20s linear infinite;
+}
+.image::after
+{
+    filter: blur(10px);
+}
+.info 
+{
+    position: absolute;
+    margin-top: -120px;
+}
+.info h1
+{
+    font-size: 22px;
+    background: #121FCF;
+    background: -webkit-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    background: -moz-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.info h2
+{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 10px;
+    color: #Fff;
+}
+.music-controls
+{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.music-controls i
+{
+    font-size: 40px;
+    transition: 0.5s;
+}
+.music-controls #next,#previous,#play
+{
+    color: #CF1512;
+}
+.music-controls #play:hover
+{
+    color: #fff;
+    transform: scale(1.5);
+}
+.music-controls #next:hover
+{
+    color: #fff;
+    transform: scale(1.5);
+}
+.music-controls #previous:hover
+{
+    color: #fff;
+    transform: scale(1.5);
+}
+.image-rotate
+{
+    animation: rot 10s linear infinite;
+}
+@keyframes rot {
+    0%{
+        transform: rotate(0deg) ;
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.time
+{
+ position: absolute;
+ width: 100%;
+ top: 50%;
+ display: flex;
+ justify-content: space-between;
+}
+.time #duration
+{
+    font-size: 17px;
+    font-weight: 500;
+    padding-right: 25px;
+}
+.time #current_time
+{
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 25px;
+}
+#track
+{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ad
+{
+  display:block;
+  background: red;
+  width: 5px;
+  height: 60px;
+  margin: 1px;
+  transform-origin: bottom center;  
+  animation: up 2s linear infinite;
+}
+@keyframes up {
+    0%{
+        transform: scaleY(0.1);
+    }
+    50%{
+        transform: scaleY(1);
+    }
+    100%{
+        transform: scaleY(0.1);
+    }
+}
+.ad:nth-child(1){
+    animation-delay: 0.1s;
+    background: blue;
+}
+.ad:nth-child(2){
+    animation-delay: 0.2s;
+    background: peru;
+}
+.ad:nth-child(3){
+    animation-delay: 0.3s;
+    background: yellow;
+}
+.ad:nth-child(4){
+    animation-delay: 0.4s;
+    background: green;
+}
+.ad:nth-child(5){
+    animation-delay: 0.5s;
+    background: orangered;
+}
+.ad:nth-child(6){
+    animation-delay: 0.6s;
+    background: rgb(0, 255, 242);
+}
+.ad:nth-child(7){
+    animation-delay: 0.7s;
+    background: rgb(255, 123, 0);
+}
+.ad:nth-child(8){
+    animation-delay: 0.8s;
+    background: rgb(255, 0, 221);
+}
+.ad:nth-child(9){
+    animation-delay: 0.9s;
+    background-image: linear-gradient( 135deg, #52E5E7 10%, #130CB7 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
