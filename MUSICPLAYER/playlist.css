@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.audiolist
+{
+    position: absolute;
+    bottom:0px;
+    width: 310px;
+    height: 0px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    z-index: 1;
+    box-shadow: 5px 5px 25px 3px rgba(0,0,0,0.68);
+    overflow: hidden;
+}
+.song_list
+{
+    width: 100%;
+    max-height: 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+    overflow-y: auto;
+}
+.icons
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.add_delete i
+{
+    margin-left: 45px;
+}
+.details
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.title
+{
+    font-size: 18px;
+    margin-left: 20px;
+}
+.artist
+{
+    font-size: 15px;
+    margin-left: 20px;
+    font-weight: 600;
+    color: grey;
+}
+#line
+{
+    margin-right: 20px;
+}
+#close
+{
+    position: relative;
+    font-size: 18px;
+    left: 25%;
+    width: 50%;
+    height: 40px;
+    background: rgb(219, 219, 219);
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}

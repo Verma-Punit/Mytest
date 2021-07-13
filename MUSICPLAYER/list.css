@@ -1,0 +1,38 @@
+
+.Function
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 230px;
+    height: 0px;
+    background: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.38);
+    overflow: hidden;
+}
+.Function .function_list
+{
+    width: 80%;
+    height: 30px;
+    margin-left: 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    font-weight: 600;
+    color: rgb(92, 92, 92);
+    border-bottom: 1px solid rgb(187, 172, 172);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+.Function .function_list:hover
+{
+    transition: 1s;
+    transform: scale(0.9);
+}

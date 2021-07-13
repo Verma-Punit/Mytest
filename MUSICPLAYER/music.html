@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="music.css">
+    <link rel="stylesheet" href="playlist.css">
+    <link rel="stylesheet" href="list.css">
+    <link rel="stylesheet" href="minimize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="info">
+            <span>
+                <i id="down" class="fas fa-chevron-down"></i>
+            </span>
+            <span>
+                <marquee id="title" direction="left">Zara Zara Behkta Hai</marquee>
+                <h6 id="artist">Bombay Jayashri</h6>
+            </span>
+            <span>
+                <i id="dotline" class="fas fa-ellipsis-v"></i>
+            </span>
+        </div>
+
+        <div class="image">
+            <img id="img" src="" alt="">
+        </div>
+
+        <audio src=""></audio>
+
+        <div class="player">
+            <div class="time">
+                <span id="current_time">0.00</span>
+                <span id="duration">0.00</span>
+            </div>
+
+            <div class="progress">
+                <div id="progress_track">
+                    <div id="progress_bar"></div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <i id="previous" class="fas fa-backward"></i>
+                <i id="play" class="fas fa-play"></i>
+                <i id="next" class="fas fa-forward"></i>
+            </div>
+        </div>
+
+        <div class="options">
+            <i class="fas fa-random"></i>
+            <i class="fas fa-download"></i>
+            <i class="far fa-heart"></i>
+            <i id="list" class="fas fa-list-ul"></i>
+        </div>
+
+        <div class="audiolist">
+            <span class="icons">
+                <i id="random" class="fas fa-random"> <span id="repeat">Repeat all</span></i>
+                <span class="add_delete">
+                    <i class="fas fa-plus-square"></i>
+                    <i class="fas fa-trash"></i>
+                </span>
+            </span>
+
+            <div class="song_list">
+            </div>
+
+            <h2 id="close">Close</h2>
+        </div>
+
+        <div class="Function">
+            <span class="function_list">Album</span>
+            <span class="function_list">Artist</span>
+            <span class="function_list">Share</span>
+            <span class="function_list">Bluetooth</span>
+            <span class="function_list">Headphone</span>
+            <span class="function_list">Sleep timer</span>
+            <span class="function_list">Edit song info</span>
+            <span class="function_list">Remove from queue</span>
+        </div>
+    </div>
+
+    <script src="audio.js"></script>
+    <script src="tracklist.js"></script>
+</body>
+
+</html>
